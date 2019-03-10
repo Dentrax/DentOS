@@ -103,7 +103,8 @@ unsigned char putch(unsigned char ch)
 		cursor_y = 24;
 		cursor_x = 0;
 
-    for(int i = 0; i < 80 * 24; i++) {
+    int i;
+    for(i = 0; i < 80 * 24; i++) {
       *(screen+i) = *(screen + i + 80);
     }
 
