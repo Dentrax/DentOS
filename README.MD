@@ -1,0 +1,45 @@
+[![License: GPL v3](https://img.shields.io/badge/License-GPLv3-blue.svg)](https://www.gnu.org/licenses/gpl-3.0)
+[![Open Source Love](https://badges.frapsoft.com/os/v1/open-source.png?v=103)](https://github.com/ellerbrock/open-source-badges/)
+[![Build Status](https://travis-ci.org/Dentrax/DentOS.svg?branch=master)](https://travis-ci.org/Dentrax/DentOS)
+
+DentOS Kernel
+============
+
+My first experimental Stand-alone 32-bit Kernel with Bootloader, written in;
+
+- x86 AT&T Assembly
+- Freestanding C
+- Rust (Soon)
+
+...with features;
+
+- 16-bit Bootloader
+- 32-bit Protected Mode
+- CPU ISR's IRQ's
+- Assembly level inline function calls
+- Primitive data types: ``bool``, ``uint8_t`` and other sizes
+- Colorful printing
+- ``printf()`` function
+
+In order to build the OS image file, use ``make os-image.bin V=1``
+To run the kernel on the ``qemu-system-x86_64``, use ``make run``
+To clean project build files, use ``make clean``
+
+TOOLS:
+
+  - GCC (for native building)
+  - LD (for linking Bootloader)
+
+TODO:
+
+  - [KERNEL] Add ``scanf()`` function
+  - [KERNEL] Add ``getch`` function
+  - [KERNEL] Add keyboard IO features
+  - [KERNEL] Add interrupt descriptor table
+  - [KERNEL] Add global descriptor table
+  - [KERNEL] Add timer interrupts
+  - [KERNEL] Add 64 bit support
+
+  - [USR] Add Rust binding betweeb kernel and usr level
+
+The DentOS Kernel is provided under: GNU GPLv3
