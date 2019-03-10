@@ -30,3 +30,9 @@
 *.exe
 *.out
 *.app
+
+# Other
+kernel.lds.s
+*.bin
+*.elf
+*.dis
