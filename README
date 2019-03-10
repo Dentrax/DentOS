@@ -21,6 +21,7 @@ In order to build the OS image file, use ``make os-image.bin V=1``
 To run the kernel on the ``qemu-system-x86_64``, use ``make run``
 To clean project build files, use ``make clean``
 
+SS: https://prnt.sc/mw1tiz
 CI: https://travis-ci.org/Dentrax/DentOS
 
 TOOLS:
