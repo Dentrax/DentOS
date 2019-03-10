@@ -1,0 +1,49 @@
+language: cpp
+sudo: false
+dist: trusty
+
+os:
+  - linux
+
+compiler:
+  - gcc
+
+matrix:
+  include:
+    - compiler: gcc
+      addons:
+        apt:
+          sources: ['ubuntu-toolchain-r-test']
+          packages: ['gcc-7']
+      env:
+        - CC=gcc-7
+        - CXX=gcc-7
+
+    - compiler: gcc
+      addons:
+        apt:
+          sources: ['ubuntu-toolchain-r-test']
+          packages: ['gcc-8']
+      env:
+        - CC=gcc-8
+        - CXX=gcc-8
+
+before_install:
+  - df -h
+  - pwd
+  - uname -a
+
+before_script:
+  - gcc -v
+  - ld -v
+  - make --version
+
+script:
+  - $CC --version
+  - $CXX --version
+  - make os-image.bin V=1
+
+notifications:
+  email:
+    on_success: never
+    on_failure: always
