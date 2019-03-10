@@ -5,7 +5,7 @@
 DentOS Kernel
 ============
 
-My first experimental stand-alone 32-bit operating system written in;
+  My first experimental Stand-alone 32-bit Operating System written in;
 
 - x86 AT&T Assembly
 - Freestanding C
