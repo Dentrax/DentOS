@@ -14,7 +14,7 @@
 #include <os/io.h>
 
 uint16_t *screen = (uint16_t *)0xB8000;
-uint16_t attr = 0x0700;
+uint16_t pointer = 0x0700;
 
 int cursor_x = 0;
 int cursor_y = 0;
@@ -43,7 +43,7 @@ void cursor_show()
 void screen_clear()
 {
   //Clean the screen
-  memsetw(screen, (attr | ' '), 80 * 25);
+  memsetw(screen, (pointer | ' '), 80 * 25);
 
   //Set cursor positions to zero
   cursor_x = 0;
@@ -55,7 +55,7 @@ void screen_clear()
 
 void screen_set_color(char foreground, char background)
 {
-    attr = ((background << 12) | ((foreground & 0x0F) << 8));
+    pointer = ((background << 12) | ((foreground & 0x0F) << 8));
 }
 
 unsigned char putch(unsigned char ch)
@@ -86,7 +86,7 @@ unsigned char putch(unsigned char ch)
 		default:
 			if(ch >= ' ')
 			{
-				 *(screen + (cursor_y * 80) + cursor_x) = (attr | ch);
+				 *(screen + (cursor_y * 80) + cursor_x) = (pointer | ch);
 				 cursor_x++;
 			}
 			break;
