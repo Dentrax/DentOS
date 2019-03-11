@@ -67,11 +67,11 @@ setup:
 	orl $CR0_PE | CR0_WP | CR0_EM, %eax
 	movl %eax, %cr0
 
-	data32 ljmp $SEL_KCSEG, $flushmenigga + LOADER_KERN_BASE - LOADER_PHYS_BASE - KERNEL_BASE
+	data32 ljmp $SEL_KCSEG, $load_edi_esi + LOADER_KERN_BASE - LOADER_PHYS_BASE - KERNEL_BASE
 
 	.code32
 
-flushmenigga:
+load_edi_esi:
 	mov $SEL_KDSEG, %ax
 	mov %ax, %ds
 	mov %ax, %es
