@@ -15,7 +15,6 @@
 
 #include "../stdint.h"
 
-uint32_t strlen(char*);
 void *memset(void *ptr, uint8_t value, uint32_t num);
 void *memsetw(void *ptr, uint16_t value, uint32_t num);
 

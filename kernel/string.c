@@ -12,14 +12,6 @@
 
 #include <os/string.h>
 
-uint32_t strlen(char *s)
-{
-	uint32_t t=0;
-	while(*s++)
-		t++;
-	return t;
-}
-
 //Scan all the 'num' with 'pos' reference until 'ptr' pointer equals value
 void *memset(void *ptr, uint8_t value, uint32_t num)
 {
