@@ -10,7 +10,7 @@
  * file LICENSE, which is part of this source code package, for details.
  */
 
-#include <os/output.h>
+#include <os/screen.h>
 #include <os/io.h>
 
 uint16_t *screen = (uint16_t *)0xB8000;

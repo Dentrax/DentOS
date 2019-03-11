@@ -5,9 +5,9 @@ CFLAGS = -O2 -Wall -I../include -nostdlib -nostdinc -fno-builtin -fno-stack-prot
 
 all: string.o port.o output.o
 
-output.o: output.c
-	@printf "\n[$(GREEN)GCC$(WHITE)] KERNEL: output.o > output.c\n"
-	gcc $(CFLAGS) -c output.c
+screen.o: screen.c
+	@printf "\n[$(GREEN)GCC$(WHITE)] KERNEL: screen.o > screen.c\n"
+	gcc $(CFLAGS) -c screen.c
 
 string.o: string.c
 	@printf "\n[$(GREEN)GCC$(WHITE)] KERNEL: string.o > string.c\n"

@@ -10,8 +10,8 @@
  * file LICENSE, which is part of this source code package, for details.
  */
 
-#ifndef DentOS_OUTPUT_H
-#define DentOS_OUTPUT_H
+#ifndef DentOS_SCREEN_H
+#define DentOS_SCREEN_H
 
 #include <os/io.h>
 

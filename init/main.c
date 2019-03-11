@@ -11,7 +11,7 @@
  */
 
 #include <stdint.h>
-#include <os/output.h>
+#include <os/screen.h>
 #include <os/interrupt.h>
 
 int main()

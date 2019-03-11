@@ -24,7 +24,7 @@ OBJ = ${SOURCES:.c=.o}
 OBJS  = boot/setup.o boot/start.o
 OBJS += boot/setup_c.o
 OBJS += init/main.o
-OBJS += kernel/string.o kernel/io.o kernel/interrupt.o kernel/isr.o kernel/output.o
+OBJS += kernel/string.o kernel/io.o kernel/interrupt.o kernel/isr.o kernel/screen.o
 
 kernel.lds.s: CPPFLAGS += -P
 kernel.lds.s: kernel.lds.S
